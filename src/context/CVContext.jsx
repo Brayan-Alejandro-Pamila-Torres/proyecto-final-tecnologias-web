@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import CVContext from './CVContextBase';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
 const initialCVData = {
   personalInfo: {
@@ -18,7 +18,7 @@ const initialCVData = {
 };
 
 export function CVProvider({ children }) {
-  const [cvData, setCVData] = useState(initialCVData);
+  const [cvData, setCVData] = useLocalStorage('devprofile-cv-data', initialCVData);
 
   const updatePersonalInfo = (personalInfo) => {
     setCVData((currentData) => ({
