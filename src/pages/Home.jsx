@@ -1,8 +1,8 @@
 function Home() {
   return (
     <div>
-      <h1>Página de Inicio - DevProfile</h1>
-      <p>Bienvenido al generador dinámico de CV.</p>
+      <h1>Pagina de Inicio - PamilonCV</h1>
+      <p>Bienvenido al generador dinamico de CV.</p>
     </div>
   );
 }

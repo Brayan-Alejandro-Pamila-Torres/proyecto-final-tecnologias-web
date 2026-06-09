@@ -1,0 +1,237 @@
+html[data-theme='dark'] body {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+html[data-theme='dark'] .app-container {
+  min-height: 100vh;
+}
+
+.theme-toggle {
+  position: sticky;
+  top: 16px;
+  z-index: 10;
+  display: block;
+  margin: 16px 16px 0 auto;
+  padding: 10px 14px;
+  color: #102a43;
+  background: #ffffff;
+  border: 1px solid #bcccdc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.theme-toggle:hover {
+  background: #f0f4f8;
+}
+
+html[data-theme='dark'] .theme-toggle {
+  color: #f9fafb;
+  background: #243b53;
+  border-color: #486581;
+}
+
+html[data-theme='dark'] .theme-toggle:hover {
+  background: #334e68;
+}
+
+html[data-theme='dark'] h1,
+html[data-theme='dark'] h2,
+html[data-theme='dark'] h3 {
+  color: #f9fafb;
+}
+
+html[data-theme='dark'] a {
+  color: #67e8f9;
+}
+
+html[data-theme='dark'] .navbar {
+  background: #1f2937;
+  border-bottom-color: #374151;
+}
+
+html[data-theme='dark'] .navbar-brand {
+  color: #f9fafb;
+}
+
+html[data-theme='dark'] .navbar-link {
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .navbar-link:hover,
+html[data-theme='dark'] .navbar-link-active {
+  color: #111827;
+  background: #67e8f9;
+}
+
+html[data-theme='dark'] .cv-preview,
+html[data-theme='dark'] .dashboard-stat,
+html[data-theme='dark'] .dashboard-chart-section {
+  background: #1f2937;
+  border-color: #374151;
+  color: #e5e7eb;
+  box-shadow: 0 18px 45px rgb(0 0 0 / 24%);
+}
+
+html[data-theme='dark'] .cv-preview-header {
+  border-bottom-color: #67e8f9;
+}
+
+html[data-theme='dark'] .cv-preview-heading h1,
+html[data-theme='dark'] .cv-preview-section h2,
+html[data-theme='dark'] .cv-preview-row h3,
+html[data-theme='dark'] .cv-preview-item h3,
+html[data-theme='dark'] .dashboard-header h1,
+html[data-theme='dark'] .dashboard-chart-section h2,
+html[data-theme='dark'] .dashboard-stat strong {
+  color: #f9fafb;
+}
+
+html[data-theme='dark'] .cv-preview-profession,
+html[data-theme='dark'] .cv-preview-contact,
+html[data-theme='dark'] .dashboard-header p,
+html[data-theme='dark'] .dashboard-stat span,
+html[data-theme='dark'] .cv-preview-row span {
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .cv-preview-section h2 {
+  border-bottom-color: #4b5563;
+}
+
+html[data-theme='dark'] .cv-preview-skill,
+html[data-theme='dark'] .cv-preview-language,
+html[data-theme='dark'] .cv-preview-item {
+  background: #111827;
+  border-color: #374151;
+}
+
+html[data-theme='dark'] form,
+html[data-theme='dark'] .profile-image-form,
+html[data-theme='dark'] .skill-card,
+html[data-theme='dark'] .project-card,
+html[data-theme='dark'] .education-card,
+html[data-theme='dark'] .language-card {
+  color: #1f2933;
+  background: #ffffff;
+}
+
+html[data-theme='dark'] form h2,
+html[data-theme='dark'] form h3,
+html[data-theme='dark'] form label,
+html[data-theme='dark'] .profile-image-form h2,
+html[data-theme='dark'] .skill-card h3,
+html[data-theme='dark'] .project-card h3,
+html[data-theme='dark'] .education-card h3,
+html[data-theme='dark'] .language-card h3 {
+  color: #102a43;
+}
+
+html[data-theme='dark'] input,
+html[data-theme='dark'] textarea,
+html[data-theme='dark'] select {
+  color: #1f2933;
+  background: #ffffff;
+  border-color: #bcccdc;
+}
+
+html[data-theme='dark'] .editor-header,
+html[data-theme='dark'] .profile-image-form,
+html[data-theme='dark'] .personal-form,
+html[data-theme='dark'] .skill-form,
+html[data-theme='dark'] .project-form,
+html[data-theme='dark'] .education-form,
+html[data-theme='dark'] .language-form,
+html[data-theme='dark'] .skill-list,
+html[data-theme='dark'] .project-list,
+html[data-theme='dark'] .education-list,
+html[data-theme='dark'] .language-list {
+  color: #e5e7eb;
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 14px 32px rgb(0 0 0 / 22%);
+}
+
+html[data-theme='dark'] .editor-header h1,
+html[data-theme='dark'] .profile-image-form h2,
+html[data-theme='dark'] .personal-form h2,
+html[data-theme='dark'] .skill-form h2,
+html[data-theme='dark'] .project-form h2,
+html[data-theme='dark'] .education-form h2,
+html[data-theme='dark'] .language-form h2 {
+  color: #f9fafb;
+}
+
+html[data-theme='dark'] .editor-header p,
+html[data-theme='dark'] .profile-image-form label,
+html[data-theme='dark'] .personal-form label,
+html[data-theme='dark'] .skill-form label,
+html[data-theme='dark'] .project-form label,
+html[data-theme='dark'] .education-form label,
+html[data-theme='dark'] .language-form label {
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .profile-image-form input,
+html[data-theme='dark'] .personal-form input,
+html[data-theme='dark'] .personal-form textarea,
+html[data-theme='dark'] .skill-form input,
+html[data-theme='dark'] .skill-form textarea,
+html[data-theme='dark'] .project-form input,
+html[data-theme='dark'] .project-form textarea,
+html[data-theme='dark'] .education-form input,
+html[data-theme='dark'] .education-form textarea,
+html[data-theme='dark'] .language-form input,
+html[data-theme='dark'] .language-form textarea {
+  color: #f9fafb;
+  background: #111827;
+  border-color: #4b5563;
+}
+
+html[data-theme='dark'] .profile-image-form input:focus,
+html[data-theme='dark'] .personal-form input:focus,
+html[data-theme='dark'] .personal-form textarea:focus,
+html[data-theme='dark'] .skill-form input:focus,
+html[data-theme='dark'] .skill-form textarea:focus,
+html[data-theme='dark'] .project-form input:focus,
+html[data-theme='dark'] .project-form textarea:focus,
+html[data-theme='dark'] .education-form input:focus,
+html[data-theme='dark'] .education-form textarea:focus,
+html[data-theme='dark'] .language-form input:focus,
+html[data-theme='dark'] .language-form textarea:focus {
+  background: #0f172a;
+  border-color: #67e8f9;
+  box-shadow: 0 0 0 3px rgb(103 232 249 / 18%);
+}
+
+html[data-theme='dark'] .skill-card,
+html[data-theme='dark'] .project-card,
+html[data-theme='dark'] .education-card,
+html[data-theme='dark'] .language-card {
+  color: #e5e7eb;
+  background: #111827;
+  border-color: #374151;
+}
+
+html[data-theme='dark'] .skill-card h3,
+html[data-theme='dark'] .project-card h3,
+html[data-theme='dark'] .education-card h3,
+html[data-theme='dark'] .language-card h3 {
+  color: #f9fafb;
+}
+
+html[data-theme='dark'] .skill-card p,
+html[data-theme='dark'] .project-card p,
+html[data-theme='dark'] .education-card p,
+html[data-theme='dark'] .language-card p {
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .form-error {
+  color: #fca5a5;
+}
+
+html[data-theme='dark'] .form-success {
+  color: #86efac;
+}

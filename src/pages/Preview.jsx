@@ -1,9 +1,26 @@
+import { PDFDownloadLink } from '@react-pdf/renderer';
+import CVPdfDocument from '../components/CVPdfDocument';
+import CVPreview from '../components/CVPreview';
+import { useCV } from '../hooks/useCV';
+import { getPdfFileName } from '../utils/pdfGenerator';
+
 function Preview() {
+  const { cvData, personalInfo } = useCV();
+
   return (
-    <div>
-      <h1>Previsualización del CV</h1>
-      <p>Aquí se mostrará la vista previa de tus datos.</p>
-    </div>
+    <main className="preview-page">
+      <div className="preview-actions">
+        <PDFDownloadLink
+          document={<CVPdfDocument cvData={cvData} />}
+          fileName={getPdfFileName(personalInfo)}
+          className="download-pdf-button"
+        >
+          {({ loading }) => (loading ? 'Preparando PDF...' : 'Descargar PDF')}
+        </PDFDownloadLink>
+      </div>
+      <CVPreview />
+    </main>
   );
 }
+
 export default Preview;

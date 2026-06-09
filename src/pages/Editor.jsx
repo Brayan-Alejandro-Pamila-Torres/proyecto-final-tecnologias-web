@@ -7,16 +7,21 @@ import SkillForm from '../components/SkillForm';
 
 function Editor() {
   return (
-    <div>
-      <h1>Editor del CV</h1>
-      <p>Aqui capturaremos los datos del formulario.</p>
-      <ProfileImageForm />
-      <PersonalForm />
-      <SkillForm />
-      <ProjectForm />
-      <EducationForm />
-      <LanguageForm />
-    </div>
+    <main className="editor-page">
+      <header className="editor-header">
+        <h1>Editor del CV</h1>
+        <p>Captura, organiza y actualiza la informacion que aparecera en tu CV.</p>
+      </header>
+
+      <div className="editor-sections">
+        <ProfileImageForm />
+        <PersonalForm />
+        <SkillForm />
+        <ProjectForm />
+        <EducationForm />
+        <LanguageForm />
+      </div>
+    </main>
   );
 }
 
