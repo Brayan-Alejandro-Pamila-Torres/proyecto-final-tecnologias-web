@@ -65,6 +65,43 @@ html[data-theme='dark'] .navbar-link-active {
   background: #67e8f9;
 }
 
+html[data-theme='dark'] .home-hero,
+html[data-theme='dark'] .home-news article,
+html[data-theme='dark'] .about-section {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 14px 32px rgb(0 0 0 / 22%);
+}
+
+html[data-theme='dark'] .home-kicker,
+html[data-theme='dark'] .home-news span {
+  color: #67e8f9;
+}
+
+html[data-theme='dark'] .home-hero h1,
+html[data-theme='dark'] .home-news h2,
+html[data-theme='dark'] .about-section h1 {
+  color: #f9fafb;
+}
+
+html[data-theme='dark'] .home-hero p,
+html[data-theme='dark'] .home-news p,
+html[data-theme='dark'] .about-section p {
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .home-primary-link {
+  color: #111827;
+  background: #67e8f9;
+  border-color: #22d3ee;
+}
+
+html[data-theme='dark'] .home-secondary-link {
+  color: #67e8f9;
+  background: #111827;
+  border-color: #67e8f9;
+}
+
 html[data-theme='dark'] .cv-preview,
 html[data-theme='dark'] .dashboard-stat,
 html[data-theme='dark'] .dashboard-chart-section {
