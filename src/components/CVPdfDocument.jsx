@@ -15,32 +15,44 @@ const styles = StyleSheet.create({
     fontFamily: 'Helvetica',
     fontSize: 10,
     lineHeight: 1.45,
+    backgroundColor: '#f8fffc',
+  },
+  topAccent: {
+    height: 8,
+    marginBottom: 18,
+    backgroundColor: '#0f766e',
+    borderRadius: 4,
   },
   header: {
     flexDirection: 'row',
     gap: 16,
-    paddingBottom: 18,
-    borderBottomWidth: 1.5,
-    borderBottomColor: '#243b53',
-    borderBottomStyle: 'solid',
+    padding: 14,
+    backgroundColor: '#ecfdf5',
+    borderLeftWidth: 5,
+    borderLeftColor: '#0f766e',
+    borderLeftStyle: 'solid',
+    marginBottom: 2,
   },
   photo: {
     width: 92,
     height: 92,
     borderRadius: 46,
     objectFit: 'cover',
+    borderWidth: 2,
+    borderColor: '#99f6e4',
+    borderStyle: 'solid',
   },
   headerContent: {
     flex: 1,
   },
   name: {
-    color: '#102a43',
+    color: '#134e4a',
     fontSize: 24,
     fontWeight: 700,
     marginBottom: 4,
   },
   profession: {
-    color: '#486581',
+    color: '#0f766e',
     fontSize: 12,
     fontWeight: 700,
     marginBottom: 8,
@@ -56,7 +68,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   link: {
-    color: '#0b7285',
+    color: '#047857',
     textDecoration: 'none',
     fontWeight: 700,
   },
@@ -64,13 +76,13 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   sectionTitle: {
-    color: '#102a43',
+    color: '#134e4a',
     fontSize: 12,
     fontWeight: 700,
     marginBottom: 8,
     paddingBottom: 4,
     borderBottomWidth: 1,
-    borderBottomColor: '#bcccdc',
+    borderBottomColor: '#5eead4',
     borderBottomStyle: 'solid',
     textTransform: 'uppercase',
   },
@@ -81,10 +93,20 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   item: {
-    paddingBottom: 7,
+    paddingBottom: 8,
+    marginBottom: 6,
     borderBottomWidth: 0.5,
-    borderBottomColor: '#d9e2ec',
+    borderBottomColor: '#ccfbf1',
     borderBottomStyle: 'solid',
+  },
+  projectItem: {
+    padding: 10,
+    marginBottom: 10,
+    backgroundColor: '#ffffff',
+    borderWidth: 1,
+    borderColor: '#99f6e4',
+    borderStyle: 'solid',
+    borderRadius: 5,
   },
   itemHeader: {
     flexDirection: 'row',
@@ -94,22 +116,43 @@ const styles = StyleSheet.create({
   },
   itemTitle: {
     flex: 1,
-    color: '#243b53',
+    color: '#1f2933',
     fontSize: 10.5,
     fontWeight: 700,
   },
   itemMeta: {
-    color: '#627d98',
+    color: '#64748b',
     fontWeight: 700,
   },
   muted: {
     color: '#52606d',
   },
   projectImage: {
-    width: 170,
-    height: 96,
+    width: 230,
+    height: 128,
     objectFit: 'cover',
+    marginBottom: 8,
+    borderRadius: 4,
+  },
+  projectTitle: {
+    color: '#134e4a',
+    fontSize: 11.5,
+    fontWeight: 700,
+    marginBottom: 4,
+  },
+  projectDescription: {
     marginBottom: 6,
+  },
+  projectMeta: {
+    color: '#475569',
+    fontWeight: 700,
+    marginBottom: 6,
+  },
+  projectLinks: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    marginTop: 2,
   },
   twoColumnGrid: {
     flexDirection: 'row',
@@ -119,9 +162,9 @@ const styles = StyleSheet.create({
   compactCard: {
     width: '48%',
     padding: 8,
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#f0fdfa',
     borderWidth: 1,
-    borderColor: '#d9e2ec',
+    borderColor: '#99f6e4',
     borderStyle: 'solid',
   },
 });
@@ -158,6 +201,7 @@ function CVPdfDocument({ cvData }) {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
+        <View style={styles.topAccent} />
         <View style={styles.header}>
           {profileImage && <Image style={styles.photo} src={profileImage} />}
 
@@ -204,23 +248,27 @@ function CVPdfDocument({ cvData }) {
         <PdfSection title="Proyectos" isVisible={projects.length > 0}>
           <View style={styles.list}>
             {projects.map((project, index) => (
-              <View style={styles.item} key={`${project.name}-${index}`} wrap={false}>
+              <View style={styles.projectItem} key={`${project.name}-${index}`}>
                 {project.image && <Image style={styles.projectImage} src={project.image} />}
-                <Text style={styles.itemTitle}>{project.name}</Text>
-                {project.description && <Text style={styles.paragraph}>{project.description}</Text>}
+                <Text style={styles.projectTitle}>{project.name}</Text>
+                {project.description && (
+                  <Text style={styles.projectDescription}>{project.description}</Text>
+                )}
                 {project.technologies && (
-                  <Text style={styles.muted}>Tecnologias: {project.technologies}</Text>
+                  <Text style={styles.projectMeta}>Tecnologias: {project.technologies}</Text>
                 )}
-                {project.repositoryUrl && (
-                  <Link src={project.repositoryUrl} style={styles.link}>
-                    Repositorio
-                  </Link>
-                )}
-                {project.deployUrl && (
-                  <Link src={project.deployUrl} style={styles.link}>
-                    Deploy
-                  </Link>
-                )}
+                <View style={styles.projectLinks}>
+                  {project.repositoryUrl && (
+                    <Link src={project.repositoryUrl} style={styles.link}>
+                      Repositorio
+                    </Link>
+                  )}
+                  {project.deployUrl && (
+                    <Link src={project.deployUrl} style={styles.link}>
+                      Deploy
+                    </Link>
+                  )}
+                </View>
               </View>
             ))}
           </View>
