@@ -6,7 +6,7 @@ function Home() {
       <section className="home-hero">
         <div>
           <p className="home-kicker">PamilonCV</p>
-          <h1>GENERA TU CV DE FORMA RAPIDA</h1>
+          <h1>CV PROFESIONAL EN MINUTOS </h1>
           <p>
             Crea, organiza y previsualiza tu curriculum desde una sola pagina. Agrega
             tu informacion personal, habilidades, proyectos, educacion e idiomas, y
