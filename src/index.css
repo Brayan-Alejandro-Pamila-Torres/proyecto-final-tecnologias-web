@@ -12,15 +12,15 @@
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --shadow: rgba(0, 0, 0, 0.06) 0 10px 15px -3px, rgba(0, 0, 0, 0.04) 0 4px 6px -2px;
 
-  /* Cambio a una fuente geométrica moderna y limpia */
+  /* Tipografía geométrica de alta definición visual */
   --sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --heading: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 16px/155% var(--sans); /* Altura de línea optimizada para legibilidad */
-  letter-spacing: 0.18px;
+  font: 16px/155% var(--sans);
+  letter-spacing: -0.01em;
   color-scheme: light dark;
   color: var(--text);
   background: var(--bg);
@@ -55,8 +55,8 @@
 
 body {
   margin: 0;
-  background: #f4f6f8; /* Tu color original */
-  color: #1f2933;      /* Tu color original */
+  background: #f4f6f8; 
+  color: #1f2933;      
   font-family: var(--sans);
 }
 
@@ -73,20 +73,21 @@ body {
 }
 
 /* ==========================================================================
-   TIPOGRAFÍA Y ENCABEZADOS
+   TIPOGRAFÍA Y ENCABEZADOS ELEVADOS
    ========================================================================== */
 
 h1, h2, h3 {
   font-family: var(--heading);
-  font-weight: 600; /* Peso visual más elegante */
+  font-weight: 600;
   color: var(--text-h);
   letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 46px; /* Balanceado para pantallas de escritorio */
-  letter-spacing: -1.4px;
+  font-size: 44px;
+  letter-spacing: -0.03em;
   margin: 32px 0;
+  line-height: 1.15;
   @media (max-width: 1024px) {
     font-size: 34px;
     margin: 20px 0;
@@ -96,7 +97,7 @@ h1 {
 h2 {
   font-size: 22px;
   line-height: 125%;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.02em;
   margin: 0 0 12px;
   @media (max-width: 1024px) {
     font-size: 18px;
@@ -120,6 +121,7 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+  border: 1px solid var(--border);
 }
 
 button, input, textarea, select {
@@ -138,14 +140,14 @@ button, input, textarea, select {
   gap: 20px;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 28px; /* Espaciado interno más balanceado */
-  background: #ffffff; /* Tu color original */
-  border-bottom: 1px solid #d9e2ec; /* Tu color original */
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  padding: 16px 28px;
+  background: #ffffff; 
+  border-bottom: 1px solid #d9e2ec; 
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
 }
 
 .navbar-brand {
-  color: #102a43; /* Tu color original */
+  color: #102a43; 
   font-size: 1.2rem;
   font-weight: 800;
   text-decoration: none;
@@ -155,32 +157,33 @@ button, input, textarea, select {
 .navbar-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* Separación más limpia entre botones */
+  gap: 10px;
+  align-items: center;
   justify-content: flex-end;
 }
 
 .navbar-link {
   padding: 8px 14px;
-  color: #486581; /* Tu color original */
+  color: #486581; 
   border-radius: 6px;
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
-  transition: all 0.2s ease; /* Transición suave */
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar-link:hover {
-  color: #ffffff; /* Tu color original */
-  background: #0b7285; /* Tu color original */
+  color: #ffffff; 
+  background: #0b7285; 
 }
 
 .navbar-link-active {
-  color: #ffffff; /* Tu color original */
-  background: #0b7285; /* Tu color original */
+  color: #ffffff; 
+  background: #0b7285; 
 }
 
 /* ==========================================================================
-   PÁGINAS Y COMPONENTES EN FORMA DE TARJETAS (Estructura Premium)
+   PÁGINAS Y CONTENEDORES EN FORMA DE TARJETAS
    ========================================================================== */
 
 .home-page, .about-page {
@@ -189,11 +192,11 @@ button, input, textarea, select {
   padding: 40px 20px 64px;
 }
 
-/* Unificación estética de paneles contenedores */
+/* Paneles contenedores con bordes y espaciados optimizados */
 .home-hero, .about-section, .home-news article {
-  background: #ffffff; /* Tu color original */
-  border: 1px solid #d9e2ec; /* Tu color original */
-  border-radius: 12px; /* Bordes redondeados modernos */
+  background: #ffffff; 
+  border: 1px solid #d9e2ec; 
+  border-radius: 12px;
   box-shadow: 0 12px 28px rgb(15 23 42 / 6%); /* Tu sombra original */
 }
 
@@ -202,13 +205,13 @@ button, input, textarea, select {
   min-height: 360px;
   align-items: center;
   justify-items: center;
-  padding: 48px; /* Más aire interno */
+  padding: 56px 48px;
   text-align: center;
 }
 
 .home-kicker {
   margin: 0 0 12px;
-  color: #0b7285; /* Tu color original */
+  color: #0b7285; 
   font-weight: 800;
   text-transform: uppercase;
   font-size: 0.85rem;
@@ -218,17 +221,17 @@ button, input, textarea, select {
 .home-hero h1 {
   max-width: 760px;
   margin: 0 0 16px;
-  color: #102a43; /* Tu color original */
-  font-size: clamp(2.25rem, 6vw, 4rem);
-  line-height: 1.1;
+  color: #102a43; 
+  font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+  line-height: 1.15;
 }
 
 .home-hero p {
   max-width: 680px;
   margin: 0;
-  color: #486581; /* Tu color original */
+  color: #486581; 
   font-size: 1.08rem;
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 .home-actions {
@@ -236,7 +239,7 @@ button, input, textarea, select {
   flex-wrap: wrap;
   gap: 14px;
   justify-content: center;
-  margin-top: 28px;
+  margin-top: 32px;
 }
 
 .home-primary-link, .home-secondary-link {
@@ -244,18 +247,18 @@ button, input, textarea, select {
   min-height: 46px;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
-  border-radius: 8px; /* Bordes estilizados */
+  padding: 0 24px;
+  border-radius: 8px;
   font-weight: 800;
   text-decoration: none;
   font-size: 0.95rem;
-  transition: all 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .home-primary-link {
-  color: #ffffff; /* Tu color original */
-  background: #0b7285; /* Tu color original */
-  border: 1px solid #075985; /* Tu color original */
+  color: #ffffff; 
+  background: #0b7285; 
+  border: 1px solid #075985; 
 }
 
 .home-primary-link:hover {
@@ -264,9 +267,9 @@ button, input, textarea, select {
 }
 
 .home-secondary-link {
-  color: #0b7285; /* Tu color original */
-  background: #ffffff; /* Tu color original */
-  border: 1px solid #0b7285; /* Tu color original */
+  color: #0b7285; 
+  background: #ffffff; 
+  border: 1px solid #0b7285; 
 }
 
 .home-secondary-link:hover {
@@ -275,31 +278,32 @@ button, input, textarea, select {
 }
 
 .home-news {
-  margin-top: 24px;
+  margin-top: 28px;
 }
 
 .home-news article, .about-section {
-  padding: 32px;
+  padding: 36px;
   text-align: center;
 }
 
 .home-news span {
-  color: #0b7285; /* Tu color original */
+  color: #0b7285; 
   font-weight: 800;
   text-transform: uppercase;
   font-size: 0.85rem;
+  letter-spacing: 0.02em;
 }
 
 .home-news h2, .about-section h1 {
   margin: 8px 0 14px;
-  color: #102a43; /* Tu color original */
+  color: #102a43; 
 }
 
 .home-news p, .about-section p {
   max-width: 820px;
   margin-left: auto;
   margin-right: auto;
-  color: #486581; /* Tu color original */
+  color: #486581; 
   line-height: 1.7;
 }
 
@@ -316,19 +320,20 @@ button, input, textarea, select {
 .editor-header {
   margin-bottom: 24px;
   padding: 28px;
-  background: #ffffff; /* Tu color original */
-  border: 1px solid #d9e2ec; /* Tu color original */
+  background: #ffffff; 
+  border: 1px solid #d9e2ec; 
   border-radius: 12px;
+  text-align: left;
 }
 
 .editor-header h1 {
   margin: 0 0 8px;
-  color: #102a43; /* Tu color original */
+  color: #102a43; 
 }
 
 .editor-header p {
   margin: 0;
-  color: #52606d; /* Tu color original */
+  color: #52606d; 
 }
 
 .editor-sections {
@@ -336,14 +341,13 @@ button, input, textarea, select {
   gap: 24px;
 }
 
-/* Formularios y Listas Estilo Bloque Premium */
 .profile-image-form, .personal-form, .skill-form, .project-form,
 .education-form, .language-form, .skill-list, .project-list,
 .education-list, .language-list {
-  padding: 28px;
-  background: #ffffff; /* Tu color original */
-  border: 1px solid #d9e2ec; /* Tu color original */
-  border-radius: 12px; /* Mayor consistencia de bordes */
+  padding: 32px; /* Más balance interno */
+  background: #ffffff; 
+  border: 1px solid #d9e2ec; 
+  border-radius: 12px;
   box-shadow: 0 12px 28px rgb(15 23 42 / 6%); /* Tu sombra original */
 }
 
@@ -357,8 +361,9 @@ button, input, textarea, select {
 .profile-image-form h2, .personal-form h2, .skill-form h2,
 .project-form h2, .education-form h2, .language-form h2 {
   margin: 0 0 20px;
-  color: #102a43; /* Tu color original */
+  color: #102a43; 
   font-size: 1.25rem;
+  text-align: left;
 }
 
 .profile-image-form label, .personal-form label, .skill-form label,
@@ -366,22 +371,23 @@ button, input, textarea, select {
   display: grid;
   gap: 8px;
   margin-bottom: 18px;
-  color: #243b53; /* Tu color original */
+  color: #243b53; 
   font-weight: 700;
   font-size: 0.9rem;
+  text-align: left;
 }
 
-/* Entradas de Texto Mejoradas */
+/* Entradas de Texto Súper Pulidas */
 .profile-image-form input, .personal-form input, .personal-form textarea,
 .skill-form input, .skill-form textarea, .project-form input, .project-form textarea,
 .education-form input, .education-form textarea, .language-form input, .language-form textarea {
   width: 100%;
   box-sizing: border-box;
   padding: 12px 14px;
-  color: #1f2933; /* Tu color original */
-  background: #f8fafc; /* Tu color original */
-  border: 1px solid #bcccdc; /* Tu color original */
-  border-radius: 8px; /* Esquinas pulidas */
+  color: #1f2933; 
+  background: #f8fafc; 
+  border: 1px solid #bcccdc; 
+  border-radius: 8px;
   outline: none;
   font-size: 0.95rem;
   transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
@@ -390,9 +396,9 @@ button, input, textarea, select {
 .profile-image-form input:focus, .personal-form input:focus, .personal-form textarea:focus,
 .skill-form input:focus, .skill-form textarea:focus, .project-form input:focus, .project-form textarea:focus,
 .education-form input:focus, .education-form textarea:focus, .language-form input:focus, .language-form textarea:focus {
-  background: #ffffff; /* Tu color original */
-  border-color: #0b7285; /* Tu color original */
-  box-shadow: 0 0 0 3px rgb(11 114 133 / 18%); /* Tu sombra de enfoque original */
+  background: #ffffff; 
+  border-color: #0b7285; 
+  box-shadow: 0 0 0 3px rgb(11 114 133 / 18%); /* Tu sombra original */
 }
 
 .profile-image-form textarea, .personal-form textarea, .skill-form textarea,
@@ -401,30 +407,30 @@ button, input, textarea, select {
   min-height: 110px;
 }
 
-/* Botones Premium de Acción */
+/* Botones Premium con Efecto Presión */
 .profile-image-form button, .personal-form button, .skill-form button,
 .project-form button, .education-form button, .language-form button,
 .skill-card button, .project-card button, .education-card button, .language-card button {
   min-height: 42px;
   margin: 4px 8px 4px 0;
   padding: 0 18px;
-  color: #ffffff; /* Tu color original */
-  background: #0b7285; /* Tu color original */
-  border: 1px solid #075985; /* Tu color original */
-  border-radius: 8px; /* Formas consistentes */
+  color: #ffffff; 
+  background: #0b7285; 
+  border: 1px solid #075985; 
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 700;
   font-size: 0.9rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.15s ease;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .profile-image-form button:hover, .personal-form button:hover, .skill-form button:hover,
 .project-form button:hover, .education-form button:hover, .language-form button:hover,
 .skill-card button:hover, .project-card button:hover, .education-card button:hover, .language-card button:hover {
-  background: #075985; /* Tu color original */
+  background: #075985; 
 }
 
 .profile-image-form button:active, .personal-form button:active, .skill-form button:active,
@@ -438,25 +444,26 @@ button, input, textarea, select {
 
 .skill-card, .project-card, .education-card, .language-card {
   padding: 20px;
-  background: #f8fafc; /* Tu color original */
-  border: 1px solid #d9e2ec; /* Tu color original */
-  border-radius: 10px; /* Bordes mejor redondeados */
+  background: #f8fafc; 
+  border: 1px solid #d9e2ec; 
+  border-radius: 10px;
+  text-align: left;
 }
 
 .skill-list, .project-list, .education-list, .language-list {
   display: grid;
-  gap: 14px;
+  gap: 16px;
 }
 
 .skill-card h3, .project-card h3, .education-card h3, .language-card h3 {
   margin: 0 0 6px;
-  color: #102a43; /* Tu color original */
+  color: #102a43; 
   font-size: 1.1rem;
 }
 
 .skill-card p, .project-card p, .education-card p, .language-card p {
   margin: 5px 0;
-  color: #486581; /* Tu color original */
+  color: #486581; 
   line-height: 1.55;
   font-size: 0.95rem;
 }
@@ -469,7 +476,7 @@ button, input, textarea, select {
   width: 128px;
   height: 128px;
   object-fit: cover;
-  border: 4px solid #d9e2ec; /* Tu color original */
+  border: 4px solid #d9e2ec; 
   border-radius: 50%;
 }
 
@@ -478,21 +485,22 @@ button, input, textarea, select {
   max-width: 360px;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  border: 1px solid #bcccdc; /* Tu color original */
+  border: 1px solid #bcccdc; 
   border-radius: 8px;
 }
 
 /* Alertas de Mensaje y Validación */
 .form-error {
   margin: 4px 0 0;
-  color: #b42318; /* Tu color original */
+  color: #b42318; 
   font-size: 0.85rem;
   font-weight: 700;
+  text-align: left;
 }
 
 .form-success {
   margin: 14px 0 0;
-  color: #067647; /* Tu color original */
+  color: #067647; 
   font-weight: 700;
 }
 
@@ -517,10 +525,10 @@ button, input, textarea, select {
   justify-content: center;
   min-height: 44px;
   padding: 0 20px;
-  color: #ffffff; /* Tu color original */
-  background: #0b7285; /* Tu color original */
-  border: 1px solid #075985; /* Tu color original */
-  border-radius: 8px; /* Formas pulidas */
+  color: #ffffff; 
+  background: #0b7285; 
+  border: 1px solid #075985; 
+  border-radius: 8px;
   font-weight: 700;
   text-decoration: none;
   font-size: 0.95rem;
@@ -528,19 +536,20 @@ button, input, textarea, select {
 }
 
 .download-pdf-button:hover {
-  background: #075985; /* Tu color original */
+  background: #075985; 
   transform: translateY(-1px);
 }
 
-/* Hoja de Currículum Simulación Papel */
+/* Hoja de Currículum Estilo Papel Limpio */
 .cv-preview {
   width: min(100%, 920px);
   margin: 0 auto;
-  padding: 48px; /* Más espaciado tipo documento real */
-  background: #ffffff; /* Tu color original */
-  border: 1px solid #d9e2ec; /* Tu color original */
+  padding: 48px;
+  background: #ffffff; 
+  border: 1px solid #d9e2ec; 
   box-shadow: 0 18px 45px rgb(15 23 42 / 10%); /* Tu sombra original */
   border-radius: 6px;
+  text-align: left;
 }
 
 .cv-preview-header {
@@ -548,7 +557,7 @@ button, input, textarea, select {
   gap: 32px;
   align-items: center;
   padding-bottom: 28px;
-  border-bottom: 2px solid #243b53; /* Tu color original */
+  border-bottom: 2px solid #243b53; 
 }
 
 .cv-preview-photo {
@@ -557,23 +566,25 @@ button, input, textarea, select {
   flex: 0 0 auto;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #d9e2ec; /* Tu color original */
+  border: 4px solid #d9e2ec; 
 }
 
 .cv-preview-heading {
   min-width: 0;
+  text-align: left;
 }
 
 .cv-preview-heading h1 {
   margin: 0;
-  color: #102a43; /* Tu color original */
+  color: #102a43; 
   font-size: 2.25rem;
   line-height: 1.1;
+  text-align: left;
 }
 
 .cv-preview-profession {
   margin: 8px 0 12px;
-  color: #486581; /* Tu color original */
+  color: #486581; 
   font-size: 1.1rem;
   font-weight: 700;
 }
@@ -582,12 +593,12 @@ button, input, textarea, select {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 16px;
-  color: #52606d; /* Tu color original */
+  color: #52606d; 
   font-size: 0.95rem;
 }
 
 .cv-preview-links a, .cv-preview-section a {
-  color: #0b7285; /* Tu color original */
+  color: #0b7285; 
   font-weight: 700;
   text-decoration: none;
 }
@@ -602,12 +613,13 @@ button, input, textarea, select {
 
 .cv-preview-section h2 {
   margin: 0 0 16px;
-  color: #102a43; /* Tu color original */
+  color: #102a43; 
   font-size: 1.05rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  border-bottom: 1px solid #bcccdc; /* Tu color original */
+  border-bottom: 1px solid #bcccdc; 
   padding-bottom: 8px;
+  text-align: left;
 }
 
 .cv-preview-section p {
@@ -623,8 +635,8 @@ button, input, textarea, select {
 
 .cv-preview-skill, .cv-preview-language, .cv-preview-item {
   padding: 14px;
-  border: 1px solid #d9e2ec; /* Tu color original */
-  background: #f8fafc; /* Tu color original */
+  border: 1px solid #d9e2ec; 
+  background: #f8fafc; 
   border-radius: 6px;
 }
 
@@ -637,13 +649,14 @@ button, input, textarea, select {
 
 .cv-preview-row h3, .cv-preview-item h3 {
   margin: 0;
-  color: #243b53; /* Tu color original */
+  color: #243b53; 
   font-size: 1rem;
+  text-align: left;
 }
 
 .cv-preview-row span {
   flex: 0 0 auto;
-  color: #627d98; /* Tu color original */
+  color: #627d98; 
   font-weight: 700;
 }
 
@@ -662,7 +675,7 @@ button, input, textarea, select {
   width: 140px;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  border: 1px solid #bcccdc; /* Tu color original */
+  border: 1px solid #bcccdc; 
   border-radius: 4px;
 }
 
@@ -678,16 +691,17 @@ button, input, textarea, select {
 
 .dashboard-header {
   margin-bottom: 28px;
+  text-align: left;
 }
 
 .dashboard-header h1 {
   margin: 0 0 8px;
-  color: #102a43; /* Tu color original */
+  color: #102a43; 
 }
 
 .dashboard-header p {
   margin: 0;
-  color: #52606d; /* Tu color original */
+  color: #52606d; 
 }
 
 .dashboard-stats {
@@ -700,33 +714,35 @@ button, input, textarea, select {
 .dashboard-stat {
   display: grid;
   gap: 8px;
-  padding: 22px;
-  background: #ffffff; /* Tu color original */
-  border: 1px solid #d9e2ec; /* Tu color original */
+  padding: 24px;
+  background: #ffffff; 
+  border: 1px solid #d9e2ec; 
   border-radius: 10px;
+  text-align: left;
 }
 
 .dashboard-stat span {
-  color: #52606d; /* Tu color original */
+  color: #52606d; 
   font-size: 0.95rem;
 }
 
 .dashboard-stat strong {
-  color: #102a43; /* Tu color original */
+  color: #102a43; 
   font-size: 2.25rem;
   line-height: 1;
 }
 
 .dashboard-chart-section {
   padding: 28px;
-  background: #ffffff; /* Tu color original */
-  border: 1px solid #d9e2ec; /* Tu color original */
+  background: #ffffff; 
+  border: 1px solid #d9e2ec; 
   border-radius: 12px;
+  text-align: left;
 }
 
 .dashboard-chart-section h2 {
   margin: 0 0 20px;
-  color: #102a43; /* Tu color original */
+  color: #102a43; 
   font-size: 1.2rem;
 }
 
@@ -734,9 +750,7 @@ button, input, textarea, select {
   height: 380px;
 }
 
-/* ==========================================================================
-   DISEÑO RESPONSIVO (Media Queries)
-   ========================================================================== */
+
 
 @media (max-width: 680px) {
   .navbar {
@@ -747,6 +761,8 @@ button, input, textarea, select {
 
   .navbar-links {
     justify-content: flex-start;
+    width: 100%;
+    margin-top: 8px;
   }
 
   .editor-page {
@@ -769,11 +785,25 @@ button, input, textarea, select {
 
   .cv-preview-header, .cv-preview-item {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .cv-preview-header {
-    display: grid;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cv-preview-heading h1 {
+    text-align: center;
+  }
+
+  .cv-preview-contact, .cv-preview-links {
+    justify-content: center;
+  }
+
+  .cv-preview-row h3, .cv-preview-item h3, .cv-preview-section h2 {
+    text-align: center;
   }
 
   .cv-preview-photo {
@@ -787,6 +817,8 @@ button, input, textarea, select {
 
   .cv-preview-project-image {
     width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
   }
 
   .skill-chart {
