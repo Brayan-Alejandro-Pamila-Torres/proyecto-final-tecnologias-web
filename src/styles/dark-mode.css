@@ -1,12 +1,17 @@
+/* ==========================================================================
+   DEVPROFILE - ESTILOS OPTIMIZADOS PARA MODO OSCURO (modo-oscuro.css)
+   ========================================================================== */
+
 html[data-theme='dark'] body {
-  background: #111827;
-  color: #e5e7eb;
+  background: #111827; /* Tu color original */
+  color: #e5e7eb;      /* Tu color original */
 }
 
 html[data-theme='dark'] .app-container {
   min-height: 100vh;
 }
 
+/* Botón de cambio de tema estilizado */
 .theme-toggle {
   position: sticky;
   top: 16px;
@@ -17,9 +22,10 @@ html[data-theme='dark'] .app-container {
   color: #102a43;
   background: #ffffff;
   border: 1px solid #bcccdc;
-  border-radius: 6px;
+  border-radius: 8px; /* Bordes consistentes */
   cursor: pointer;
   font-weight: 700;
+  transition: all 0.2s ease; /* Transición suave */
 }
 
 .theme-toggle:hover {
@@ -36,6 +42,7 @@ html[data-theme='dark'] .theme-toggle:hover {
   background: #334e68;
 }
 
+/* Encabezados y Enlaces Generales */
 html[data-theme='dark'] h1,
 html[data-theme='dark'] h2,
 html[data-theme='dark'] h3 {
@@ -46,6 +53,7 @@ html[data-theme='dark'] a {
   color: #67e8f9;
 }
 
+/* Barra de Navegación */
 html[data-theme='dark'] .navbar {
   background: #1f2937;
   border-bottom-color: #374151;
@@ -57,6 +65,7 @@ html[data-theme='dark'] .navbar-brand {
 
 html[data-theme='dark'] .navbar-link {
   color: #cbd5e1;
+  transition: all 0.2s ease;
 }
 
 html[data-theme='dark'] .navbar-link:hover,
@@ -65,12 +74,13 @@ html[data-theme='dark'] .navbar-link-active {
   background: #67e8f9;
 }
 
+/* Paneles Principales de la Página de Inicio (Home) */
 html[data-theme='dark'] .home-hero,
 html[data-theme='dark'] .home-news article,
 html[data-theme='dark'] .about-section {
   background: #1f2937;
   border-color: #374151;
-  box-shadow: 0 14px 32px rgb(0 0 0 / 22%);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35); /* Sombra más sutil y profunda */
 }
 
 html[data-theme='dark'] .home-kicker,
@@ -94,21 +104,24 @@ html[data-theme='dark'] .home-primary-link {
   color: #111827;
   background: #67e8f9;
   border-color: #22d3ee;
+  transition: all 0.2s ease;
 }
 
 html[data-theme='dark'] .home-secondary-link {
   color: #67e8f9;
   background: #111827;
   border-color: #67e8f9;
+  transition: all 0.2s ease;
 }
 
+/* Previsualización del CV y Dashboard */
 html[data-theme='dark'] .cv-preview,
 html[data-theme='dark'] .dashboard-stat,
 html[data-theme='dark'] .dashboard-chart-section {
   background: #1f2937;
   border-color: #374151;
   color: #e5e7eb;
-  box-shadow: 0 18px 45px rgb(0 0 0 / 24%);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
 }
 
 html[data-theme='dark'] .cv-preview-header {
@@ -144,33 +157,15 @@ html[data-theme='dark'] .cv-preview-item {
   border-color: #374151;
 }
 
+/* ==========================================================================
+   ESTILIZACIÓN DE FORMULARIOS DEL EDITOR EN MODO OSCURO
+   ========================================================================== */
+
+/* Corregido: Ya no fuerza fondos blancos en las tarjetas del formulario */
 html[data-theme='dark'] form,
-html[data-theme='dark'] .profile-image-form,
-html[data-theme='dark'] .skill-card,
-html[data-theme='dark'] .project-card,
-html[data-theme='dark'] .education-card,
-html[data-theme='dark'] .language-card {
-  color: #1f2933;
-  background: #ffffff;
-}
-
-html[data-theme='dark'] form h2,
-html[data-theme='dark'] form h3,
-html[data-theme='dark'] form label,
-html[data-theme='dark'] .profile-image-form h2,
-html[data-theme='dark'] .skill-card h3,
-html[data-theme='dark'] .project-card h3,
-html[data-theme='dark'] .education-card h3,
-html[data-theme='dark'] .language-card h3 {
-  color: #102a43;
-}
-
-html[data-theme='dark'] input,
-html[data-theme='dark'] textarea,
-html[data-theme='dark'] select {
-  color: #1f2933;
-  background: #ffffff;
-  border-color: #bcccdc;
+html[data-theme='dark'] .profile-image-form {
+  color: #e5e7eb;
+  background: #1f2937;
 }
 
 html[data-theme='dark'] .editor-header,
@@ -187,7 +182,7 @@ html[data-theme='dark'] .language-list {
   color: #e5e7eb;
   background: #1f2937;
   border-color: #374151;
-  box-shadow: 0 14px 32px rgb(0 0 0 / 22%);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
 }
 
 html[data-theme='dark'] .editor-header h1,
@@ -210,6 +205,10 @@ html[data-theme='dark'] .language-form label {
   color: #cbd5e1;
 }
 
+/* Corregido: Inputs consistentes e integrados con el tono oscuro */
+html[data-theme='dark'] input,
+html[data-theme='dark'] textarea,
+html[data-theme='dark'] select,
 html[data-theme='dark'] .profile-image-form input,
 html[data-theme='dark'] .personal-form input,
 html[data-theme='dark'] .personal-form textarea,
@@ -224,6 +223,7 @@ html[data-theme='dark'] .language-form textarea {
   color: #f9fafb;
   background: #111827;
   border-color: #4b5563;
+  transition: all 0.15s ease;
 }
 
 html[data-theme='dark'] .profile-image-form input:focus,
@@ -239,9 +239,10 @@ html[data-theme='dark'] .language-form input:focus,
 html[data-theme='dark'] .language-form textarea:focus {
   background: #0f172a;
   border-color: #67e8f9;
-  box-shadow: 0 0 0 3px rgb(103 232 249 / 18%);
+  box-shadow: 0 0 0 4px rgba(103, 232, 249, 0.15); /* Enfoque más suave */
 }
 
+/* Tarjetas Dinámicas de los Listados */
 html[data-theme='dark'] .skill-card,
 html[data-theme='dark'] .project-card,
 html[data-theme='dark'] .education-card,
@@ -265,6 +266,7 @@ html[data-theme='dark'] .language-card p {
   color: #cbd5e1;
 }
 
+/* Mensajes de Validación */
 html[data-theme='dark'] .form-error {
   color: #fca5a5;
 }
