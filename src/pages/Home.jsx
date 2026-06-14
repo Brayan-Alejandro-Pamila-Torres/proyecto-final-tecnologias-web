@@ -5,7 +5,7 @@ function Home() {
     <main className="home-page">
       <section className="home-hero">
         <div>
-          <p className="home-kicker">PamilonCV</p>
+          <p className="home-kicker">Pamilon-CV</p>
           <h1>CV PROFESIONAL EN MINUTOS </h1>
           <p>
             Crea, organiza y previsualiza tu curriculum desde una sola pagina. Agrega
