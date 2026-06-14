@@ -15,7 +15,7 @@ function Dashboard() {
     <main className="dashboard-page">
       <header className="dashboard-header">
         <h1>Dashboard de Habilidades</h1>
-        <p>Resumen dinamico de la informacion capturada para el CV.</p>
+        <p>Aqui puedes ver lo que ya has capturado para tu CV.</p>
       </header>
 
       <section className="dashboard-stats" aria-label="Resumen del CV">
